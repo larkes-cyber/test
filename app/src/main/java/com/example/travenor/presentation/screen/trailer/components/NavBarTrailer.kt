@@ -23,14 +23,14 @@ fun NavBarTrailer(epoch:Int){
             NavBarTrailerItem(0.3f,false)
         }
         if(epoch == 2){
-            NavBarTrailerItem(0.3f,false)
-            NavBarTrailerItem(0.5f,true)
             NavBarTrailerItem(0.2f,false)
+            NavBarTrailerItem(0.6f,true)
+            NavBarTrailerItem(0.3f,false)
         }
         if(epoch == 3){
-            NavBarTrailerItem(0.1f,false)
-            NavBarTrailerItem(0.1f,false)
-            NavBarTrailerItem(0.5f,true)
+            NavBarTrailerItem(0.2f,false)
+            NavBarTrailerItem(0.15f,false)
+            NavBarTrailerItem(0.7f,true)
         }
     }
 }

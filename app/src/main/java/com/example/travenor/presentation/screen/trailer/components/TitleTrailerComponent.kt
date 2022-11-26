@@ -18,9 +18,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.travenor.R
+import com.example.travenor.presentation.screen.trailer.TrailerModel
 import com.example.travenor.presentation.theme.HighLightColor
 import com.example.travenor.presentation.theme.TitleColor
 import com.example.travenor.presentation.theme.geometr
+
 
 @Composable
 fun TitleTrailerComponent(title:String) {
@@ -41,7 +44,7 @@ fun TitleTrailerComponent(title:String) {
             },
             textAlign = TextAlign.Center
         )
-    }, modifier = Modifier.padding(start = 27.dp, end = 37.dp))
+    }, modifier = Modifier.padding(start = 20.dp, end = 37.dp))
 
 }
 

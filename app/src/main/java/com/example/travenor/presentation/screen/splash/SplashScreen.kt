@@ -36,5 +36,5 @@ fun SplashScreen(navController: NavController){
             modifier = Modifier.align(Alignment.Center)
         )
     }
-    navController.navigate(Screen.TrailerScreen.route)
+  //  navController.navigate(Screen.TrailerScreen.route)
 }

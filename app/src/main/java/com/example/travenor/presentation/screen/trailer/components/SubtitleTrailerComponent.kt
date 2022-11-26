@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.travenor.presentation.theme.SubtitleColor
 import com.example.travenor.presentation.theme.geometr
+import com.example.travenor.presentation.theme.gillsans
 
 @Composable
 fun SubtitleTrailerComponent(subtitle:String) {
@@ -23,7 +24,7 @@ fun SubtitleTrailerComponent(subtitle:String) {
         style = TextStyle(
             fontSize = 16.sp
         ),
-        fontFamily = geometr,
+        fontFamily = gillsans,
         fontWeight = FontWeight.Black,
         fontStyle = FontStyle.Normal,
         modifier = Modifier.padding(start = 27.dp, end = 37.dp),

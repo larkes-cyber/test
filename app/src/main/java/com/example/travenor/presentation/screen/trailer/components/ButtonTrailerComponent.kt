@@ -10,6 +10,7 @@ import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -21,11 +22,15 @@ import androidx.compose.ui.unit.sp
 import com.example.travenor.presentation.theme.LightPrimaryBlue
 import com.example.travenor.presentation.theme.SubtitleColor
 import com.example.travenor.presentation.theme.geometr
+import com.example.travenor.presentation.theme.smuidisplay
 
 @Composable
-fun ButtonTrailerComponent(text:String){
+fun ButtonTrailerComponent(
+    text:String,
+    state:MutableState<Int>
+){
     Button(
-        onClick = { },
+        onClick = { state.value = state.value + 1},
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier
             .height(56.dp)
@@ -38,7 +43,7 @@ fun ButtonTrailerComponent(text:String){
             style = TextStyle(
                 fontSize = 16.sp
             ),
-            fontFamily = geometr,
+            fontFamily = smuidisplay,
             fontWeight = FontWeight.Black,
             fontStyle = FontStyle.Normal,
             textAlign = TextAlign.Center

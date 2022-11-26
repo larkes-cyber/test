@@ -20,13 +20,14 @@ import com.example.travenor.presentation.screen.trailer.TrailerScreen
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.SplashScreen.route){
+    NavHost(navController = navController, startDestination = Screen.TrailerScreen.route){
         composable(route = Screen.SplashScreen.route){
             SplashScreen(navController = navController)
         }
         composable(route = Screen.TrailerScreen.route){
             TrailerScreen(navController = navController)
         }
+
     }
 
 }
@@ -44,13 +45,3 @@ fun Navigation() {
 //    }
 //}
 //
-@Composable
-fun AuthScreen(navController: NavController, some:String){
-    Column(Modifier.fillMaxSize()) {
-        Text("second", modifier = Modifier.align(Alignment.CenterHorizontally))
-        Spacer(modifier = Modifier.height(15.dp))
-        Button(onClick = { navController.navigate(Screen.SplashScreen.route) }, modifier = Modifier.align(Alignment.End)) {
-
-        }
-    }
-}
