@@ -14,6 +14,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.travenor.presentation.navigation.Screen
+import com.example.travenor.presentation.screen.splash.SplashScreen
+import com.example.travenor.presentation.screen.trailer.TrailerScreen
 
 @Composable
 fun Navigation() {
@@ -22,34 +24,26 @@ fun Navigation() {
         composable(route = Screen.SplashScreen.route){
             SplashScreen(navController = navController)
         }
-        composable(
-            route = Screen.AuthScreen.route + "/{name}",
-            arguments = listOf(
-                navArgument("name"){
-                    type = NavType.StringType
-                    defaultValue = "lol"
-                }
-            )
-        ){entry ->
-            AuthScreen(navController = navController, some = entry.arguments?.getString("name")!!)
+        composable(route = Screen.TrailerScreen.route){
+            TrailerScreen(navController = navController)
         }
     }
 
 }
 
-@Composable
-fun SplashScreen(navController: NavController){
-    Column(Modifier.fillMaxSize()) {
-        Text("first", modifier = Modifier.align(Alignment.CenterHorizontally))
-        Spacer(modifier = Modifier.height(15.dp))
-        Button(onClick = {
-            navController.navigate(Screen.AuthScreen.withArgs("arg"))
-        }, modifier = Modifier.align(Alignment.End)) {
-
-        }
-    }
-}
-
+//@Composable
+//fun SplashScreen(navController: NavController){
+//    Column(Modifier.fillMaxSize()) {
+//        Text("first", modifier = Modifier.align(Alignment.CenterHorizontally))
+//        Spacer(modifier = Modifier.height(15.dp))
+//        Button(onClick = {
+//            navController.navigate(Screen.AuthScreen.withArgs("arg"))
+//        }, modifier = Modifier.align(Alignment.End)) {
+//
+//        }
+//    }
+//}
+//
 @Composable
 fun AuthScreen(navController: NavController, some:String){
     Column(Modifier.fillMaxSize()) {
