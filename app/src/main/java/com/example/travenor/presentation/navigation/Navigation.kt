@@ -14,18 +14,22 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.travenor.presentation.navigation.Screen
+import com.example.travenor.presentation.screen.auth.AuthScreen
 import com.example.travenor.presentation.screen.splash.SplashScreen
 import com.example.travenor.presentation.screen.trailer.TrailerScreen
 
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.TrailerScreen.route){
+    NavHost(navController = navController, startDestination = Screen.AuthScreen.route){
         composable(route = Screen.SplashScreen.route){
             SplashScreen(navController = navController)
         }
         composable(route = Screen.TrailerScreen.route){
             TrailerScreen(navController = navController)
+        }
+        composable(route = Screen.AuthScreen.route){
+            AuthScreen(navController = navController)
         }
 
     }

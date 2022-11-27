@@ -1,4 +1,4 @@
-package com.example.travenor.presentation.screen.trailer.components
+package com.example.travenor.presentation.screen.auth.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,17 +20,16 @@ import com.example.travenor.presentation.theme.LightPrimaryBlue
 import com.example.travenor.presentation.theme.sfuidisplay
 
 @Composable
-fun ButtonTrailerComponent(
-    text:String,
-    state:MutableState<Int>
-){
+fun AuthButtonComponent(
+    text:String
+) {
     Button(
-        onClick = { state.value = state.value + 1},
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier
             .height(56.dp)
             .fillMaxWidth(),
-        colors = ButtonDefaults.buttonColors(backgroundColor = LightPrimaryBlue)
+        colors = ButtonDefaults.buttonColors(backgroundColor = LightPrimaryBlue),
+        onClick = {}
     ) {
         Text(
             text = text,

@@ -13,6 +13,8 @@ val gillsans = FontFamily(
     Font(R.font.gillsansmt, FontWeight.Normal)
 )
 
-val smuidisplay = FontFamily(
-    Font(R.font.sfuidisplaysemibold, FontWeight.SemiBold)
+val sfuidisplay = FontFamily(
+    Font(R.font.sfuidisplaysemibold, FontWeight.SemiBold),
+    Font(R.font.sfuidisplayregular,FontWeight.Normal),
+    Font(R.font.sfuidisplaymedium, FontWeight.Medium)
 )
