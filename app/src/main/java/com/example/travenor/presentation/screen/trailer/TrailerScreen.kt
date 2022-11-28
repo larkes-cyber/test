@@ -42,11 +42,7 @@ fun TrailerScreen(navController: NavController) {
     )
 
     if(epochState.value == 4) {
-        navController.navigate(Screen.SplashScreen.route){
-            popUpTo(Screen.SplashScreen.route) {
-                inclusive = false
-            }
-        }
+        navController.navigate(Screen.AuthScreen.route)
         epochState.value = 5
     }
     else if(epochState.value < 4) TrailerComponent(trailerData[epochState.value - 1], epochState)

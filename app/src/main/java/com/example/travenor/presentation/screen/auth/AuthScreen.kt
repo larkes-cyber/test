@@ -21,22 +21,33 @@ fun AuthScreen(navController: NavController) {
     Box(Modifier.fillMaxSize()){
         Column(
             Modifier
-                .align(Alignment.Center)
-                .padding(horizontal = 20.dp)
+                .align(Alignment.BottomEnd)
+                .padding(start = 20.dp, end = 20.dp, bottom = 30.dp)
         ) {
+            Spacer(Modifier.height(40.dp))
             AuthTitleComponent(title = "Sign in now")
             Spacer(Modifier.height(12.dp))
-            AuthSubtitleComponent(subtitle = "Please sign in to continue our app",size = 16)
-            Spacer(Modifier.height(40.dp))
-            AuthLoginFieldComponent()
+            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
+                AuthSubtitleComponent(subtitle = "Please sign in to continue our app",size = 16)
+            }
+            Spacer(Modifier.height(25.dp))
+            AuthLoginFieldComponent(label = "Enter your login", placeholder = "E-mail")
             Spacer(Modifier.height(20.dp))
             AuthPasswordFieldComponent()
             Spacer(Modifier.height(16.dp))
-            HighLightRedirectComponent(text = "Forget Password?", route = Screen.SplashScreen.route, navController = navController)
+            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.BottomEnd){
+                HighLightRedirectComponent(text = "Forget Password?", route = Screen.SplashScreen.route, navController = navController)
+            }
             Spacer(Modifier.height(40.dp))
             AuthButtonComponent("Sign In")
             Spacer(Modifier.height(40.dp))
-            AuthFooterComponent(signUp = true, route = Screen.SplashScreen.route, navController = navController)
+            AuthFooterComponent(signUp = true, route = Screen.RegScreen.route, navController = navController)
+        }
+        Box(
+            Modifier
+                .align(Alignment.TopStart)
+                .padding(30.dp)) {
+            AuthFloatingButton()
         }
     }
 }

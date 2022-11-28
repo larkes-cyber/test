@@ -26,9 +26,8 @@ fun HighLightRedirectComponent(text:String, route:String, navController: NavCont
             fontFamily = sfuidisplay,
             fontWeight = FontWeight.Medium,
             fontStyle = FontStyle.Normal,
-            textAlign = TextAlign.End,
+            textAlign = TextAlign.End
         ),
-        modifier = Modifier.fillMaxWidth(),
         onClick = {
             navController.navigate(route)
         }

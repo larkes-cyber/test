@@ -21,7 +21,10 @@ import com.example.travenor.presentation.theme.InputBoxColor
 import com.example.travenor.presentation.theme.LightPrimaryBlue
 
 @Composable
-fun AuthLoginFieldComponent() {
+fun AuthLoginFieldComponent(
+    label:String,
+    placeholder:String
+) {
 
     val loginState = remember {
         mutableStateOf(TextFieldValue(""))
@@ -32,8 +35,8 @@ fun AuthLoginFieldComponent() {
         onValueChange = {
             loginState.value = it
         },
-        label = { Text(text = "Enter your login") },
-        placeholder = { Text(text = "E-mail") },
+        label = { Text(text = label) },
+        placeholder = { Text(text = placeholder) },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
         modifier = Modifier.fillMaxWidth(),
         colors = TextFieldDefaults.textFieldColors(

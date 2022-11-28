@@ -1,5 +1,6 @@
 package com.example.travenor.presentation.screen.splash
 
+import android.os.Handler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -36,5 +37,9 @@ fun SplashScreen(navController: NavController){
             modifier = Modifier.align(Alignment.Center)
         )
     }
-  //  navController.navigate(Screen.TrailerScreen.route)
+    val handler = Handler()
+    handler.postDelayed({
+        navController.navigate(Screen.TrailerScreen.route)
+    }, 2000)
+  //
 }

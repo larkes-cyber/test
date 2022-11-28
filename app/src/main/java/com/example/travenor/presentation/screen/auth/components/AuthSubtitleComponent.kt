@@ -20,7 +20,6 @@ fun AuthSubtitleComponent(subtitle:String,size:Int) {
         fontWeight = FontWeight.Normal,
         fontSize = size.sp,
         fontStyle = FontStyle.Normal,
-        textAlign = TextAlign.Center,
-        modifier = Modifier.fillMaxWidth()
+        textAlign = TextAlign.Center
     )
 }
