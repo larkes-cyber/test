@@ -36,7 +36,7 @@ fun AuthScreen(navController: NavController) {
             AuthPasswordFieldComponent()
             Spacer(Modifier.height(16.dp))
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.BottomEnd){
-                HighLightRedirectComponent(text = "Forget Password?", route = Screen.SplashScreen.route, navController = navController)
+                HighLightRedirectComponent(text = "Forget Password?", route = Screen.ForgotPassword.route, navController = navController)
             }
             Spacer(Modifier.height(40.dp))
             AuthButtonComponent("Sign In")

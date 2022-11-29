@@ -1,5 +1,6 @@
 package com.example.travenor.presentation
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -15,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.travenor.presentation.navigation.Screen
 import com.example.travenor.presentation.screen.auth.AuthScreen
+import com.example.travenor.presentation.screen.auth.ForgotPasswordScreen
 import com.example.travenor.presentation.screen.auth.RegScreen
 import com.example.travenor.presentation.screen.splash.SplashScreen
 import com.example.travenor.presentation.screen.trailer.TrailerScreen
@@ -27,6 +29,8 @@ fun Navigation() {
             SplashScreen(navController = navController)
         }
         composable(route = Screen.TrailerScreen.route){
+            BackHandler(true) {
+            }
             TrailerScreen(navController = navController)
         }
         composable(route = Screen.AuthScreen.route){
@@ -34,6 +38,9 @@ fun Navigation() {
         }
         composable(route = Screen.RegScreen.route){
             RegScreen(navController = navController)
+        }
+        composable(route = Screen.ForgotPassword.route){
+            ForgotPasswordScreen(navController = navController)
         }
 
     }

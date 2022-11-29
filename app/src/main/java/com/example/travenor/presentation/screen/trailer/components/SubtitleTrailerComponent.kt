@@ -27,7 +27,7 @@ fun SubtitleTrailerComponent(subtitle:String) {
         fontFamily = gillsans,
         fontWeight = FontWeight.Black,
         fontStyle = FontStyle.Normal,
-        modifier = Modifier.padding(start = 27.dp, end = 37.dp),
+        modifier = Modifier.padding(start = 50.dp, end = 37.dp),
         textAlign = TextAlign.Center
     )
 }

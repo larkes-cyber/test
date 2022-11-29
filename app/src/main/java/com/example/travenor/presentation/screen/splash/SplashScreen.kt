@@ -1,11 +1,13 @@
 package com.example.travenor.presentation.screen.splash
 
 import android.os.Handler
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -38,8 +40,14 @@ fun SplashScreen(navController: NavController){
         )
     }
     val handler = Handler()
-    handler.postDelayed({
-        navController.navigate(Screen.TrailerScreen.route)
-    }, 2000)
+    var flag = true
+    Log.d("imfoolllll","im here")
+    LaunchedEffect(true){
+            handler.postDelayed({
+                    navController.navigate(Screen.TrailerScreen.route)
+         }, 2000)
+    }
+
+ //   navController.navigate(Screen.TrailerScreen.route)
   //
 }
